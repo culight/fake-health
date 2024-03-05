@@ -3,34 +3,31 @@ AUTHORS: Rick Moton
 OBJECTIVE: This file will contain the Patient model
 NOTES:
 """
+
 from abc import ABC, abstractmethod
 
 from faker import Faker
-#==============================================================================
+
+# ==============================================================================
+
 
 class Patient:
     """
     This class will contain the Patient model
     """
-    def __init__(
-            self,
-            profile: dict
-        ):
-         self.init_patient_profile(profile)
 
-    def init_patient_profile(self, profile: dict):
-            self.first_name
-            self.last_name
-            self.gender
-            self.dob
-            ssn: str,
-            address: str,
-            city: str,
-            state: str,
-            zip_code: str,
-            phone: str,
-            email: str
-        profile = 
-        return profile
+    def __init__(self, faker: Faker, profile: dict = None):
+        self.first_name, self.last_name = faker.name().split(" ")
+        self.dob = faker.date_of_birth(minimum_age=18, maximum_age=100)
+        self.gender = faker.random_element(elements=("M", "F"))
+        self.email = faker.email()
+        self.phone = faker.phone_number()
+        self.address = faker.address()
+        self.city = faker.city()
+        self.state = faker.state()
+        self.zip_code = faker.zipcode()
 
-# create family class
+        self.eligbility = faker.
+
+    def __str__(self):
+        return str(tuple(vars(self).values()))
