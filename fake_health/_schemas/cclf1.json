@@ -1,0 +1,31 @@
+{
+    "beneficiary": {
+        "member_id": "uuid",
+        "first_name": "string",
+        "middle_name": "string",
+        "last_name": "string",
+        "date_of_birth": "string",
+        "state": "string",
+        "city": "string",
+        "county": "string",
+        "zip": "string",
+        "sex": "string",
+        "race": "string",
+        "age": "integer",
+        "medicare_status_code": "string",
+        "dual_status_code": "string",
+        "death_date": "string",
+        "hospice_begin_date": "string",
+        "hospice_end_date": "string",
+        "entitlement_reason_code": "string",
+        "entitlement_buyin_indicator": "string",
+        "parta_begin_date": "string",
+        "partb_begin_date": "string",
+        "mailing_address_1": "string",
+        "mailing_address_2": "string",
+        "mailing_address_3": "string",
+        "mailing_address_4": "string",
+        "mailing_address_5": "string",
+        "mailing_address_6": "string"
+    }
+}
